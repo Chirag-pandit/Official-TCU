@@ -15,12 +15,12 @@ export default function CommunityPartners() {
   ]
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 ">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 bg-black">
       <div className="w-full max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-500">Community Partners</h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-500">SPONSORS</h2>
           </div>
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
             Our success is driven by the support of a strong and vibrant network of communities.
@@ -30,8 +30,8 @@ export default function CommunityPartners() {
         {/* Animated Logo Rows */}
         <div className="space-y-8 overflow-hidden">
           {/* First Row - Left to Right */}
-          <div className="relative">
-            <div className="flex gap-6 animate-scroll-left">
+          <div className="relative group">
+            <div className="flex gap-6 animate-scroll-left group-hover:paused">
               {[...partners.slice(0, 6), ...partners.slice(0, 6)].map((partner, idx) => (
                 <div
                   key={`row1-${idx}`}
@@ -48,8 +48,8 @@ export default function CommunityPartners() {
           </div>
 
           {/* Second Row - Right to Left */}
-          <div className="relative">
-            <div className="flex gap-6 animate-scroll-right">
+          <div className="relative group">
+            <div className="flex gap-6 animate-scroll-right group-hover:paused">
               {[...partners.slice(6), ...partners.slice(6)].map((partner, idx) => (
                 <div
                   key={`row2-${idx}`}
@@ -94,6 +94,10 @@ export default function CommunityPartners() {
           display: flex;
           width: max-content;
           animation: scroll-right 20s linear infinite;
+        }
+        /* Pause on hover */
+        .group-hover\\:paused:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>
