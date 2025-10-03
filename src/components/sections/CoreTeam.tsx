@@ -24,7 +24,7 @@ const teamMembers = [
     image: "/Abhi.jpg",
   },
   {
-    name: "Namit",
+    name: "Namit Kr. Singh",
     designation: "Sponsors Team Head",
     image: "/namit.jpg",
   },{
