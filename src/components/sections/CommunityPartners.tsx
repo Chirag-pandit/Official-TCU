@@ -1,17 +1,17 @@
 export default function CommunityPartners() {
   const partners = [
-    { name: "Kode", query: "tech community logo with K letter" },
-    { name: "Girls Leading Tech", query: "girls leading tech community logo" },
-    { name: "Apex Circle", query: "apex circle tech community logo" },
-    { name: "GDG Siliguri", query: "google developer group siliguri logo" },
-    { name: "ProbCoder", query: "probcoder programming community logo" },
-    { name: "Code Crafting", query: "code crafting developer community logo" },
-    { name: "Tech Fusion", query: "tech fusion community logo" },
-    { name: "Events.nfo", query: "events info tech community logo" },
-    { name: "Hack Loop", query: "hack loop hackathon community logo" },
-    { name: "Developers", query: "developers community logo" },
-    { name: "The Student Spot", query: "the student spot community logo" },
-    { name: "Ascent", query: "ascent tech community logo" },
+    { name: "Coming soon", query: "tech community logo with K letter" },
+    { name: "Coming soon", query: "girls leading tech community logo" },
+    { name: "Coming soon", query: "apex circle tech community logo" },
+    { name: "Coming soon", query: "google developer group siliguri logo" },
+    { name: "Coming soon", query: "probcoder programming community logo" },
+    { name: "Coming soon", query: "code crafting developer community logo" },
+    { name: "Coming soon", query: "tech fusion community logo" },
+    { name: "Coming soon", query: "events info tech community logo" },
+    { name: "Coming soon", query: "hack loop hackathon community logo" },
+    { name: "Coming soon", query: "developers community logo" },
+    { name: "Coming soon", query: "the student spot community logo" },
+    { name: "Coming soon", query: "ascent tech community logo" },
   ]
 
   return (
@@ -20,7 +20,7 @@ export default function CommunityPartners() {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-500">SPONSORS</h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-500">Community Partners</h2>
           </div>
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
             Our success is driven by the support of a strong and vibrant network of communities.
