@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cyberpunk Dark Theme */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Neon Yellow/Gold */
+    --primary: 48 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    /* Cyan accent */
+    --secondary: 190 100% 50%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    /* Terminal Green */
+    --accent: 120 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 48 100% 50%;
+    --input: 0 0% 15%;
+    --ring: 48 100% 50%;
+
+    --radius: 0rem;
+
+    /* Custom tokens */
+    --cyber-glow: 48 100% 50%;
+    --terminal-green: 120 100% 50%;
+    --neon-cyan: 190 100% 50%;
+    --neon-red: 0 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Courier New', monospace;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px hsl(var(--cyber-glow)), 0 0 20px hsl(var(--cyber-glow)), 0 0 30px hsl(var(--cyber-glow));
+  }
+  
+  .text-glow-cyan {
+    text-shadow: 0 0 10px hsl(var(--neon-cyan)), 0 0 20px hsl(var(--neon-cyan)), 0 0 30px hsl(var(--neon-cyan));
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 10px hsl(var(--cyber-glow)), 0 0 20px hsl(var(--cyber-glow)), inset 0 0 10px hsl(var(--cyber-glow) / 0.2);
+  }
+  
+  .glitch {
+    animation: glitch 1s infinite;
+  }
+  
+  @keyframes glitch {
+    0%, 100% {
+      text-shadow: 0.05em 0 0 hsl(var(--neon-red)), -0.05em -0.025em 0 hsl(var(--neon-cyan)), -0.025em 0.05em 0 hsl(var(--terminal-green));
+    }
+    14% {
+      text-shadow: 0.05em 0 0 hsl(var(--neon-red)), -0.05em -0.025em 0 hsl(var(--neon-cyan)), -0.025em 0.05em 0 hsl(var(--terminal-green));
+    }
+    15% {
+      text-shadow: -0.05em -0.025em 0 hsl(var(--neon-red)), 0.025em 0.025em 0 hsl(var(--neon-cyan)), -0.05em -0.05em 0 hsl(var(--terminal-green));
+    }
+    49% {
+      text-shadow: -0.05em -0.025em 0 hsl(var(--neon-red)), 0.025em 0.025em 0 hsl(var(--neon-cyan)), -0.05em -0.05em 0 hsl(var(--terminal-green));
+    }
+    50% {
+      text-shadow: 0.025em 0.05em 0 hsl(var(--neon-red)), 0.05em 0 0 hsl(var(--neon-cyan)), 0 -0.05em 0 hsl(var(--terminal-green));
+    }
+    99% {
+      text-shadow: 0.025em 0.05em 0 hsl(var(--neon-red)), 0.05em 0 0 hsl(var(--neon-cyan)), 0 -0.05em 0 hsl(var(--terminal-green));
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
