@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 
 export default function Hero() {
-  const targetDate = new Date("2025-11-23T00:00:00")
+  const targetDate = new Date("2025-12-06T00:00:00")
   const [countdown, setCountdown] = useState({
     days: "00",
     hours: "00",
@@ -124,7 +124,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="text-left">
-              <div className="text-sm md:text-lg font-bold text-purple-300 tracking-wide">THIS 23 NOVEMBER</div>
+              <div className="text-sm md:text-lg font-bold text-purple-300 tracking-wide">THIS 6 DECEMBER</div>
               <div className="text-xs md:text-base font-mono text-purple-400">BE READY!</div>
             </div>
           </div>
@@ -147,21 +147,29 @@ export default function Hero() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 pt-4 md:pt-8">
-            <Button
-              size="lg"
-              className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white border-2 border-purple-400 text-base md:text-lg px-6 md:px-10 py-5 md:py-7 font-bold tracking-wide shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:shadow-[0_0_50px_rgba(168,85,247,0.6)] transition-all duration-300 hover:scale-105"
-            >
-              Apply with Devfolio
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="w-full sm:w-auto border-2 border-purple-500 text-purple-300 hover:bg-purple-500/20 hover:text-purple-200 hover:border-purple-400 text-base md:text-lg px-6 md:px-10 py-5 md:py-7 font-bold tracking-wide backdrop-blur-sm transition-all duration-300 hover:scale-105 bg-transparent"
-            >
-              Guidelines
-            </Button>
-          </div>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          <a href="https://tcu-hack-verse.devfolio.co/">
+          <Button 
+            size="lg"
+            className="bg-secondary text-background hover:bg-secondary/90 border-2 border-secondary text-lg px-8 py-6 font-mono"
+          >
+            Apply with Devfolio
+          </Button>
+          </a>
+         <a 
+  href="/tcu_verse.txt" 
+  download="tcu_verse.txt"
+>
+  <Button
+    size="lg"
+    variant="outline"
+    className="border-2 border-primary text-primary hover:bg-primary hover:text-background text-lg px-8 py-6 font-mono"
+  >
+    Guidelines
+  </Button>
+</a>
+
+        </div>
 
           {/* Social Links */}
           <div className="mt-8 md:mt-16 border-2 border-purple-500/50 bg-purple-950/20 backdrop-blur-md rounded-lg p-4 md:p-8 max-w-3xl mx-auto hover:border-purple-400/70 transition-all duration-300">
