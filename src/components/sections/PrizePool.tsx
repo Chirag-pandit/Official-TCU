@@ -9,14 +9,14 @@ gsap.registerPlugin(ScrollTrigger)
 const prizes = [
   {
     place: "2nd Prize",
-    amount: "₹20,000",
+    amount: "₹10,000",
     emoji: "🥈",
     badge: "Silver",
     badgeColor: "bg-pink-500/20 text-pink-400 border-pink-500/50",
   },
   {
     place: "1st Prize",
-    amount: "₹30,000",
+    amount: "₹20,000",
     emoji: "🏆",
     badge: "Gold",
     badgeColor: "bg-pink-500/20 text-pink-400 border-pink-500/50",
@@ -24,7 +24,7 @@ const prizes = [
   },
   {
     place: "3rd Prize",
-    amount: "₹15,000",
+    amount: "₹5,000",
     emoji: "🥉",
     badge: "Bronze",
     badgeColor: "bg-pink-500/20 text-pink-400 border-pink-500/50",

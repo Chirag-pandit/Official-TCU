@@ -8,7 +8,7 @@ import PrizePool from './sections/PrizePool';
 
 export default function Sections() {
   return (
-    <div className="py-20">
+    <div className="w-full ">
       <AboutUs />
       <Schedule />
       <PrizePool />

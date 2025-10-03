@@ -15,14 +15,12 @@ export default function CommunityPartners() {
   ]
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 bg-black">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 ">
       <div className="w-full max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-block mb-6">
-            <h2 className="text-4xl md:text-5xl font-bold px-8 py-4 border-4 border-[oklch(0.75_0.15_45)] bg-[oklch(0.95_0.02_45)] text-black">
-              COMMUNITY PARTNERS
-            </h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-500">Community Partners</h2>
           </div>
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
             Our success is driven by the support of a strong and vibrant network of communities.
@@ -68,6 +66,36 @@ export default function CommunityPartners() {
           </div>
         </div>
       </div>
+
+      {/* Custom animations */}
+      <style jsx>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        @keyframes scroll-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0);
+          }
+        }
+        .animate-scroll-left {
+          display: flex;
+          width: max-content;
+          animation: scroll-left 20s linear infinite;
+        }
+        .animate-scroll-right {
+          display: flex;
+          width: max-content;
+          animation: scroll-right 20s linear infinite;
+        }
+      `}</style>
     </section>
   )
 }
