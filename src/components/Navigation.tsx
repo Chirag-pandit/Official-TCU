@@ -20,8 +20,8 @@ export default function Navigation() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-purple-500/30 bg-black/90 backdrop-blur-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
-            TCU_VERSE
+          <div className="h-12 w-auto">
+            <img src="/7.png" alt="TCU_VERSE Logo" className="h-full w-auto" />
           </div>
 
           {/* Desktop Navigation */}
