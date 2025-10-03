@@ -103,14 +103,12 @@ export default function Hero() {
             </div>
 
             <h1 className="relative">
-              <div className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tight">
-                <span className="text-white">TCU</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-purple-600 to-purple-800 animate-pulse">
-                  VERSE
-                </span>
-              </div>
-              <div className="text-6xl md:text-8xl lg:text-[10rem] font-black mt-2 md:mt-4 text-transparent bg-clip-text bg-gradient-to-b from-purple-500 to-purple-900">
-                2025
+              <div className="w-full max-w-4xl mx-auto">
+                <img 
+                  src="/8.png" 
+                  alt="TCU VERSE 2025" 
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </h1>
           </div>
