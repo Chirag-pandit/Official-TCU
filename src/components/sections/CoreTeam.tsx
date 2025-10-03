@@ -26,7 +26,7 @@ const teamMembers = [
   {
     name: "Namit",
     designation: "Sponsors Team Head",
-    image: "/Namit.jpg",
+    image: "/namit.jpg",
   },{
     name: "Keshav",
     designation: "PR Team Head",
