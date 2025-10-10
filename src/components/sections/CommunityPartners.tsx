@@ -1,65 +1,86 @@
 export default function CommunityPartners() {
   const partners = [
-    { name: "Coming soon", query: "tech community logo with K letter" },
-    { name: "Coming soon", query: "girls leading tech community logo" },
-    { name: "Coming soon", query: "apex circle tech community logo" },
-    { name: "Coming soon", query: "google developer group siliguri logo" },
-    { name: "Coming soon", query: "probcoder programming community logo" },
-    { name: "Coming soon", query: "code crafting developer community logo" },
-    { name: "Coming soon", query: "tech fusion community logo" },
-    { name: "Coming soon", query: "events info tech community logo" },
-    { name: "Coming soon", query: "hack loop hackathon community logo" },
-    { name: "Coming soon", query: "developers community logo" },
-    { name: "Coming soon", query: "the student spot community logo" },
-    { name: "Coming soon", query: "ascent tech community logo" },
-  ]
+    { name: "GDG IILM", image: "/logos/gdgIILM.png" },
+    { name: "FIEM ACM", image: "/logos/fiemacm_mx8uox.jpg" },
+    { name: "Ascent Circle", image: "/logos/Ascent_circle.jpg" },
+    { name: "GDG Siliguri", image: "/logos/gdg-siliguri.png" },
+    { name: "Probcoder", image: "/logos/probcoder.png" },
+    { name: "Code Crafting", image: "/logos/code-crafting.png" },
+    { name: "Tech Fusion", image: "/logos/tech-fusion.png" },
+    { name: "Events Info", image: "/logos/events-info.png" },
+    { name: "Hack Loop", image: "/logos/hack-loop.png" },
+    { name: "Developers", image: "/logos/developers.png" },
+    { name: "The Student Spot", image: "/logos/student-spot.png" },
+    { name: "Ascent", image: "/logos/ascent.png" },
+  ];
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 ">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 bg-black text-white">
       <div className="w-full max-w-7xl mx-auto">
-        {/* Header Section */}
+        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-block mb-6">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-500">Community Partners</h2>
-          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 text-purple-500">
+            Community Partners
+          </h2>
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
             Our success is driven by the support of a strong and vibrant network of communities.
           </p>
         </div>
 
-        {/* Animated Logo Rows */}
+        {/* Logo rows (two scrolling rows) */}
         <div className="space-y-8 overflow-hidden">
-          {/* First Row - Left to Right */}
+          {/* Row 1 */}
           <div className="relative group">
             <div className="flex gap-6 animate-scroll-left group-hover:paused">
               {[...partners.slice(0, 6), ...partners.slice(0, 6)].map((partner, idx) => (
                 <div
-                  key={`row1-${idx}`}
-                  className="flex-shrink-0 w-64 h-40 bg-[oklch(0.2_0.05_280)] border-2 border-[oklch(0.488_0.243_264.376)] rounded-lg flex items-center justify-center p-6 hover:border-[oklch(0.627_0.265_303.9)] transition-colors"
+                  key={`r1-${idx}`}
+                  className="relative flex-shrink-0 w-64 h-44 rounded-2xl overflow-hidden border-2 border-purple-600 hover:border-purple-400 transition transform-gpu hover:scale-105"
+                  style={{
+                    // background image fills entire card including corners
+                    backgroundImage: `url(${partner.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    // optional fallback color if image has transparency
+                    backgroundColor: "#0b1020",
+                  }}
                 >
-                  <img
-                    src={`/.jpg?height=120&width=200&query=${partner.query}`}
-                    alt={partner.name}
-                    className="max-w-full max-h-full object-contain"
-                  />
+                  {/* Optional dim overlay to improve text contrast */}
+                  <div className="absolute inset-0 bg-black/20"></div>
+
+                  {/* Bottom name label */}
+                  <div className="absolute left-0 right-0 bottom-0 bg-black/70 py-2 text-center">
+                    <span className="text-sm md:text-base font-semibold text-purple-300">
+                      {partner.name}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Second Row - Right to Left */}
+          {/* Row 2 */}
           <div className="relative group">
             <div className="flex gap-6 animate-scroll-right group-hover:paused">
               {[...partners.slice(6), ...partners.slice(6)].map((partner, idx) => (
                 <div
-                  key={`row2-${idx}`}
-                  className="flex-shrink-0 w-64 h-40 bg-[oklch(0.2_0.05_280)] border-2 border-[oklch(0.488_0.243_264.376)] rounded-lg flex items-center justify-center p-6 hover:border-[oklch(0.627_0.265_303.9)] transition-colors"
+                  key={`r2-${idx}`}
+                  className="relative flex-shrink-0 w-64 h-44 rounded-2xl overflow-hidden border-2 border-purple-600 hover:border-purple-400 transition transform-gpu hover:scale-105"
+                  style={{
+                    backgroundImage: `url(${partner.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundColor: "#0b1020",
+                  }}
                 >
-                  <img
-                    src={`/.jpg?height=120&width=200&query=${partner.query}`}
-                    alt={partner.name}
-                    className="max-w-full max-h-full object-contain"
-                  />
+                  <div className="absolute inset-0 bg-black/20"></div>
+                  <div className="absolute left-0 right-0 bottom-0 bg-black/70 py-2 text-center">
+                    <span className="text-sm md:text-base font-semibold text-purple-300">
+                      {partner.name}
+                    </span>
+                  </div>
                 </div>
               ))}
             </div>
@@ -67,39 +88,30 @@ export default function CommunityPartners() {
         </div>
       </div>
 
-      {/* Custom animations */}
+      {/* Animations */}
       <style jsx>{`
         @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
         @keyframes scroll-right {
-          0% {
-            transform: translateX(-50%);
-          }
-          100% {
-            transform: translateX(0);
-          }
+          0% { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
         }
         .animate-scroll-left {
           display: flex;
           width: max-content;
-          animation: scroll-left 20s linear infinite;
+          animation: scroll-left 25s linear infinite;
         }
         .animate-scroll-right {
           display: flex;
           width: max-content;
-          animation: scroll-right 20s linear infinite;
+          animation: scroll-right 25s linear infinite;
         }
-        /* Pause on hover */
         .group-hover\\:paused:hover {
           animation-play-state: paused;
         }
       `}</style>
     </section>
-  )
+  );
 }
