@@ -10,7 +10,8 @@ const sponsors: Sponsor[] = [
   // 🏆 Add your sponsors here
   { name: "ETHIndia", image: "/ethindia-logo.svg", tier: "Silver" },
   { name: "Interview Buddy", image: "/logos/interviewbuddy.png", tier: "Silver" },
-
+  { name: ".xyz", image: "/logos/xyz.png", tier: "Bronze" },
+  
   // Example placeholders:
   { name: "COMING SOON", tier: "Platinum" },
   { name: "COMING SOON", tier: "Diamond" },

@@ -15,7 +15,7 @@ export default function CommunityPartners() {
   ];
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 bg-black text-white">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20  text-white">
       <div className="w-full max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
