@@ -40,7 +40,7 @@ export default function AboutUs() {
 
             <div className="pt-6 border-t border-purple-500/20 mt-8">
               <p className="text-base md:text-lg text-purple-300/70 leading-relaxed">
-                TCU verse Hackathon is a premier event bringing together innovators, developers, and creators to build
+                TCU verse Hackathon is a 8 Hour premier event bringing together innovators, developers, and creators to build
                 the future. Join us in pushing the boundaries of technology and creativity.
               </p>
             </div>
